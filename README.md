@@ -2,7 +2,7 @@
 Simple react-native app using redux
 
 ## Running on Android
-You need android Studio installed and path variables configured:
+You need android Studio installed and path variables configured (these can be different on your machine):
 ```
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
