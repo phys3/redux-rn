@@ -17,4 +17,5 @@ Simple react-native app using redux
 ```$ react-native run-ios```
 
 ## App structure
-All of the redux related code is in `src/redux` while the ui is in `src/views`
+All of the redux related code is in `src/redux` while the ui is in `src/views`.
+Redux middlewares are used to have more control of the data flow and ease extensibility.
