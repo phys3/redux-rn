@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 import {connect} from 'react-redux';
 import {getRewards} from '../../redux/actions/rewards';
 import {FlatList} from 'react-native';
-import {WrappedRewardItem, CollectedRewardItem} from './components/RewardListItem';
+import {AvailableRewardItem, CollectedRewardItem} from './components/RewardListItem';
 
 const Title = styled.Text`
   font-size: 40px;
@@ -22,7 +22,7 @@ const RewardListView = ({rewards, getRewards}) => {
   }, []);
 
   const renderAvailable = useCallback(
-    ({item}) => <WrappedRewardItem reward={item} />,
+    ({item}) => <AvailableRewardItem reward={item} />,
     [],
   );
   const renderCollected = useCallback(
@@ -39,7 +39,7 @@ const RewardListView = ({rewards, getRewards}) => {
           data={rewards.available}
           renderItem={renderAvailable}
           keyExtractor={keyExtractor}
-          accessibilityLabel="collectable_rewards"
+          accessibilityLabel="available_rewards"
         />
       </Card>
       <Card>

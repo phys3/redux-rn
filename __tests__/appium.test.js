@@ -16,7 +16,7 @@ beforeAll(async () => {
 });
 
 test('Collect reward', async () => {
-    expect(await driver.hasElementByAccessibilityId('collectable_rewards')).toBe(
+    expect(await driver.hasElementByAccessibilityId('available_rewards')).toBe(
         true,
         );
     expect(await driver.hasElementByAccessibilityId('collected_rewards')).toBe(
@@ -26,5 +26,8 @@ test('Collect reward', async () => {
     await element.click();
     expect(await driver.hasElementByAccessibilityId('collected-reward-bd6629f9-92fc-46ab-9f84-f21d784c81b7')).toBe(
         true,
+    );
+    expect(await driver.hasElementByAccessibilityId('available-reward-bd6629f9-92fc-46ab-9f84-f21d784c81b7')).toBe(
+      false,
     );
 });

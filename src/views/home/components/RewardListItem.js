@@ -36,7 +36,7 @@ class RewardItem extends React.PureComponent {
   render() {
     const {reward, collectReward} = this.props;
     return (
-      <Container accessibilityLabel={`reward-${reward.id}`}>
+      <Container accessibilityLabel={`available-reward-${reward.id}`}>
         <Column>
           <Name>{reward.name}</Name>
           <PointsNeeded>{`Points Needed: ${reward.needed_points}`}</PointsNeeded>
@@ -62,5 +62,5 @@ export class CollectedRewardItem extends React.PureComponent {
   }
 }
 
-export const WrappedRewardItem = connect(null, {collectReward})(RewardItem);
+export const AvailableRewardItem = connect(null, {collectReward})(RewardItem);
 
